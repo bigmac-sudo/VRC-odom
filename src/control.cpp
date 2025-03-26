@@ -119,8 +119,7 @@ void Control::turnToHeading(double targetHeading) {
     }
 
     // Stop motors once the turn is complete
-    leftChassis.stop();
-    rightChassis.stop();
+    Odometry::Stop();
 }
 
 
