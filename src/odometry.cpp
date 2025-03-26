@@ -39,12 +39,12 @@ double Odometry::distanceTraveled(double rev){
 }
 
 double Odometry::newXvalue(){
-  return (x1+(distanceTraveled(backTrackingWheel.position(rev)-prevencoder)*cos(inertialHeading())));
+  return (x1+(distanceTraveled(backTrackingWheel.position(rev)-prevencoder)*cos(degtorad(inertialHeading()))));
 
 
 }
 double Odometry::newYvalue(){
-  return (y_1+(distanceTraveled(backTrackingWheel.position(rev)-prevencoder)*sin(inertialHeading())));
+  return (y_1+(distanceTraveled(backTrackingWheel.position(rev)-prevencoder)*sin(degtorad(inertialHeading()))));
 
 }
 
